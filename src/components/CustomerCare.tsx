@@ -5,7 +5,6 @@ export function CustomerCare() {
   return (
     <section className="relative px-8 py-20 max-w-7xl mx-auto">
       <style>{`
-        /* Dark mode customer care adjustments */
         .dark .customer-care-card {
           background-color: #1f1a1f !important;
           box-shadow: 0 20px 70px rgba(236, 72, 153, 0.15), 0 8px 35px rgba(236, 72, 153, 0.1) !important;

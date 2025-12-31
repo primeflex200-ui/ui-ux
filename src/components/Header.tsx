@@ -5,7 +5,6 @@ export function Header() {
   return (
     <header className="relative z-50 px-8 py-6">
       <style>{`
-        /* Dark mode header adjustments */
         .dark header button {
           transition: all 0.3s ease;
         }

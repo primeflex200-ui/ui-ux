@@ -5,7 +5,6 @@ export function AboutSection() {
   return (
     <section className="relative px-8 py-20 max-w-7xl mx-auto">
       <style>{`
-        /* Dark mode about section adjustments */
         .dark .about-bg-glow-1 {
           background: rgba(236, 72, 153, 0.25) !important;
           opacity: 0.3 !important;

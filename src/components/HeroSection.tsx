@@ -4,7 +4,6 @@ export function HeroSection() {
   return (
     <section className="relative px-8 py-20 max-w-7xl mx-auto">
       <style>{`
-        /* Dark mode adjustments for hero section */
         .dark .hero-glow-1 {
           background: radial-gradient(circle, rgba(147, 51, 234, 0.18) 0%, rgba(139, 92, 246, 0.10) 40%, transparent 70%) !important;
           filter: blur(70px) !important;

@@ -22,12 +22,10 @@ export function LandingPage() {
       background: 'linear-gradient(135deg, #fff8fa 0%, #ffe9f2 15%, #ffd9e8 35%, #ffe4ed 55%, #fff2f7 75%, #ffffff 100%)'
     }}>
       <style>{`
-        /* Dark Mode Background - Pure Black */
         .dark {
           background: linear-gradient(135deg, #000000 0%, #0a0a0a 15%, #050505 35%, #0a0a0a 55%, #000000 75%, #000000 100%) !important;
         }
         
-        /* White Text for Night Sky Theme - Hero Section Only */
         .dark .text-gray-900 {
           color: #111827 !important;
         }
@@ -41,12 +39,10 @@ export function LandingPage() {
           color: #4b5563 !important;
         }
         
-        /* Keep White Backgrounds for Cards */
         .dark .bg-white {
           background-color: #ffffff !important;
         }
         
-        /* Keep Original Border Colors */
         .dark .border-gray-200 {
           border-color: #e5e7eb !important;
         }
@@ -54,7 +50,6 @@ export function LandingPage() {
           border-color: #fbcfe8 !important;
         }
         
-        /* Keep Original Shadow System */
         .dark .shadow-lg {
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
         }
@@ -65,13 +60,11 @@ export function LandingPage() {
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
         }
         
-        /* Keep Gradient Colors */
         .dark .bg-gradient-to-br,
         .dark .bg-gradient-to-r {
           filter: none;
         }
         
-        /* Keep Button Styles */
         .dark button {
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -80,22 +73,18 @@ export function LandingPage() {
           transform: translateY(-1px);
         }
         
-        /* Keep Radial Gradients */
         .dark [style*="radial-gradient"] {
           opacity: 1 !important;
         }
         
-        /* GPU-Accelerated Transforms */
         [class*="hover:scale"] {
           transition: transform 0.3s ease !important;
         }
         
-        /* Lightweight Opacity */
         [class*="opacity"] {
           transition: opacity 0.3s ease !important;
         }
         
-        /* CSS-Based Drifting Stars with Twinkling */
         .stars {
           position: fixed;
           inset: 0;
@@ -129,20 +118,17 @@ export function LandingPage() {
           animation: starTwinkle 6s ease-in-out infinite alternate;
         }
         
-        /* Gentle star movement */
         @keyframes starsMove {
           from { transform: translateY(0); }
           to { transform: translateY(-300px); }
         }
         
-        /* Smooth twinkling */
         @keyframes starTwinkle {
           0%   { opacity: 0.3; }
           50%  { opacity: 0.6; }
           100% { opacity: 0.4; }
         }
         
-        /* CSS-Based Drifting Stars */
         .stars-back {
           background:
             radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.3), transparent),
@@ -179,7 +165,6 @@ export function LandingPage() {
           to { transform: translateY(-250px); }
         }
         
-        /* Enhanced Night Sky Stars */
         .star {
           position: absolute;
           background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(200, 180, 255, 0.6) 30%, transparent 70%);
@@ -195,7 +180,6 @@ export function LandingPage() {
           box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(200, 180, 255, 0.5);
         }
         
-        /* Hanging Elements */
         .hanging-element {
           position: absolute;
           pointer-events: none;
@@ -223,7 +207,6 @@ export function LandingPage() {
       `}</style>
       
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {/* Deep Night Sky Atmospheric Layers */}
         <div 
           className="absolute -top-40 -left-40 w-[900px] h-[900px] rounded-full"
           style={{
@@ -290,9 +273,6 @@ export function LandingPage() {
           </svg>
         </div>
 
-        {/* Hanging Social Media Elements */}
-        
-        {/* Instagram Icon - Left Side */}
         <div className="hanging-element" style={{ top: '5%', left: '12%' }}>
           <div className="hanging-thread" style={{ height: '80px', left: '50%' }} />
           <div style={{ 
@@ -315,7 +295,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Facebook Icon - Right Side */}
         <div className="hanging-element" style={{ top: '8%', right: '18%' }}>
           <div className="hanging-thread" style={{ height: '100px', left: '50%' }} />
           <div style={{ 
@@ -331,7 +310,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Mobile/Phone Icon - Center Left */}
         <div className="hanging-element" style={{ top: '15%', left: '25%' }}>
           <div className="hanging-thread" style={{ height: '120px', left: '50%' }} />
           <div style={{ 
@@ -348,7 +326,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Decorative Star - Top Right */}
         <div className="hanging-element" style={{ top: '10%', right: '30%' }}>
           <div className="hanging-thread" style={{ height: '60px', left: '50%' }} />
           <div style={{ 
@@ -364,7 +341,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Abstract Mobile Icon - Center Right */}
         <div className="hanging-element" style={{ top: '12%', right: '35%' }}>
           <div className="hanging-thread" style={{ height: '90px', left: '50%' }} />
           <div style={{ 
@@ -381,7 +357,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Small Decorative Star - Left */}
         <div className="hanging-element" style={{ top: '20%', left: '8%' }}>
           <div className="hanging-thread" style={{ height: '50px', left: '50%' }} />
           <div style={{ 
@@ -397,7 +372,6 @@ export function LandingPage() {
           </div>
         </div>
 
-        {/* Glowing Accent Orbs */}
         <div className="absolute top-[25%] left-[25%] w-4 h-4 rounded-full" style={{ 
           background: 'radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0.3) 70%, transparent 100%)',
           boxShadow: '0 0 25px rgba(168, 85, 247, 0.6), 0 0 40px rgba(168, 85, 247, 0.3)',

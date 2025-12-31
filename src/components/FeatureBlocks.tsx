@@ -5,7 +5,6 @@ export function FeatureBlocks() {
   return (
     <section className="relative px-8 py-20 max-w-7xl mx-auto">
       <style>{`
-        /* Dark mode feature blocks adjustments */
         .dark .feature-card {
           background-color: #1f1a1f !important;
           box-shadow: 8px 0 30px rgba(236, 72, 153, 0.18), 0 10px 50px rgba(236, 72, 153, 0.12) !important;

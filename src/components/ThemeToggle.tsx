@@ -5,7 +5,6 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check if user has a theme preference
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
       setIsDark(true);
@@ -33,7 +32,6 @@ export function ThemeToggle() {
       <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-pink-300 to-rose-300 opacity-0 group-hover:opacity-40 blur-md transition-all duration-500" />
       <div className="absolute -inset-2 rounded-full border-2 border-pink-300 opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
       
-      {/* Sun and Moon combined icon */}
       <div className="relative w-6 h-6 z-10">
         <Sun 
           className={`absolute inset-0 w-6 h-6 text-white transition-all duration-500 ${

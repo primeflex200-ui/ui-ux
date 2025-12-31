@@ -39,7 +39,6 @@ const SplitText = ({
   const onCompleteRef = useRef(onLetterAnimationComplete);
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
-  // Keep callback ref updated
   useEffect(() => {
     onCompleteRef.current = onLetterAnimationComplete;
   }, [onLetterAnimationComplete]);
@@ -57,7 +56,6 @@ const SplitText = ({
   useGSAP(
     () => {
       if (!ref.current || !text || !fontsLoaded) return;
-      // Prevent re-animation if already completed
       if (animationCompletedRef.current) return;
       
       const el = ref.current;
@@ -77,7 +75,6 @@ const SplitText = ({
             : `+=${marginValue}${marginUnit}`;
       const start = `top ${startPct}%${sign}`;
 
-      // Set initial state
       gsap.set(elements, { ...from });
 
       const animation = gsap.to(elements, {
@@ -90,9 +87,7 @@ const SplitText = ({
           start,
           once: true,
           toggleActions: 'play none none none',
-          onEnter: () => {
-            // Ensure animation plays
-          }
+          onEnter: () => {}
         },
         onComplete: () => {
           animationCompletedRef.current = true;
@@ -100,12 +95,10 @@ const SplitText = ({
         }
       });
 
-      // Fallback: if element is already in view, animate immediately
       const rect = el.getBoundingClientRect();
       const isInView = rect.top < window.innerHeight && rect.bottom > 0;
       
       if (isInView) {
-        // Trigger animation immediately if already in viewport
         setTimeout(() => {
           if (!animationCompletedRef.current) {
             gsap.to(elements, {
@@ -147,7 +140,6 @@ const SplitText = ({
   );
 
   const splitTextContent = () => {
-    // Check if parent has gradient classes
     const hasGradient = className.includes('bg-gradient') || className.includes('bg-clip-text');
     const isTransparent = className.includes('text-transparent');
     
@@ -187,7 +179,6 @@ const SplitText = ({
     const hasGradient = className.includes('bg-gradient') || className.includes('bg-clip-text');
     const isTransparent = className.includes('text-transparent');
     
-    // Remove gradient classes from parent if splitting text
     const parentClasses = hasGradient && isTransparent 
       ? className.replace(/text-transparent|bg-clip-text|bg-gradient-[^\s]*/g, '').trim()
       : className;
